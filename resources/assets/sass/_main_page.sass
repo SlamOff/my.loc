@@ -1,0 +1,131 @@
+.main
+    padding: 14vh 0
+    height: 100vh
+    overflow: hidden
+    position: absolute
+    width: 100%
+    @media #{$_lg}
+        overflow-y: visible
+        overflow-x: hidden
+        padding: 0
+        //height: auto
+    //position: relative
+    .nav_left
+        position: absolute
+        left: 0
+        top: 50%
+        z-index: 999
+        transform: translateY(-50%)
+        cursor: pointer
+        color: $darkGreen
+        @media #{$_sm}
+            display: none
+            font-size: 18px
+        &:before
+            content: ''
+            height: 1px
+            width: 38px
+            background-color: #000
+            position: absolute
+            left: 0
+            top: 0
+            bottom: 0
+            margin: auto
+        span
+            transform: translateX(45px)
+            display: inline-block
+            writing-mode: vertical-lr
+            font-size: 24px
+            line-height: 30px
+            font-weight: 200
+            text-transform: lowercase
+            @media #{$_md}
+                font-size: 18px
+    .nav_right
+        @extend .nav_left
+        right: 0
+        left: auto
+        @media #{$_sm}
+            display: none
+            //font-size: 18px
+        &:before
+            left: auto
+            right: 0
+        span
+            transform: translateX(-45px)
+    &__pict
+        height: 100vh
+        display: block
+        position: absolute
+        margin: auto
+        left: 0
+        top: 0
+        right: 0
+        @media #{$_s}
+            //transform: translateX(-20px)
+            left: -150px
+            margin-top: 20px
+        @media #{$_xs}
+            left: -250px
+            margin-top: 30px
+    .container--abs
+        position: absolute
+        left: 0
+        bottom: 13vh
+        z-index: 50
+        @media #{$_lg}
+            bottom: 60px
+        @media #{$_sm}
+            bottom: 50px
+        .row
+            text-align: center
+            overflow: hidden
+    &__desc
+        color: $darkGreen
+        font-size: 24px
+        line-height: 30px
+        font-weight: 200
+        left: 50%
+        img
+            display: block
+            margin: 0 auto
+            transform: translateX(-12px)
+        span
+            position: relative
+            @media #{$_sm}
+                font-size: 18px
+            @media #{$_xs}
+                font-size: 14px
+            &:before
+                content: ''
+                position: absolute
+                height: 1px
+                background-color: $darkGreen
+                width: 500%
+                bottom: 0
+                left: 105%
+                top: 3px
+                margin: auto
+                @media #{$_sm}
+                    width: 20px
+                @media #{$_s}
+                    width: 10px
+                    top: 2px
+            &:after
+                @extend :before
+                left: auto
+                right: 105%
+#main_slider
+	position: absolute
+	overflow: hidden
+	left: 0
+	top: 0
+	height: 100vh
+	width: 100%
+	user-select: none
+	//overflow: hidden
+	.slider_item
+		position: absolute
+		transition: left .5s
+		height: 100%
+		overflow: hidden

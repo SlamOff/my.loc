@@ -1,0 +1,80 @@
+.header
+    position: absolute
+    height: 14vh
+    width: 100%
+    top: 0
+    left: 0
+    z-index: 2
+    user-select: none
+    @media #{$_lg}
+        position: relative
+    .container
+        height: 100%
+        .row
+            display: flex
+            align-items: center
+            height: 100%
+            justify-content: space-between
+    .logo_large
+        width: 241px
+    .logo_small
+        width: 68px
+    &__cart
+        cursor: pointer
+        float: left
+        color: $darkGreen
+        font-size: 24px
+        line-height: 30px
+        font-weight: 100
+        transition: font-size 1s
+        transition: color .4s
+        margin-left: 60px
+        &:hover
+            color: #c7452c
+        &.animated
+            //font-size: 48px
+        @media #{$_s}
+            font-size: 18px
+        @media (max-height: 600px) and (min-width: 1223px)
+            font-size: 18px
+        @media #{$_xs}
+            margin-left: 30px
+    &__btn
+        float: left
+        cursor: pointer
+        margin-left: 190px
+        display: block
+        background-color: transparent
+        border: 0
+        @media #{$_lg}
+            margin-left: 70px
+        @media #{$_xs}
+            margin-left: 30px
+    &__return
+        cursor: pointer
+        font-size: 24px
+        line-height: 30px
+        font-weight: 100
+        color: $darkGreen
+        float: left
+        position: relative
+        &.centered
+            @media #{$_sm}
+                left: 50%
+                transform: translateX(-50%)
+        @media #{$_s}
+            font-size: 18px
+            position: absolute
+            right: 30px
+            top: 80px
+        &:before
+            position: absolute
+            width: 8px
+            height: 13px
+            content: ''
+            top: 3px
+            bottom: 0
+            margin: auto
+            left: -20px
+            background-image: url(/img/left.png)
+

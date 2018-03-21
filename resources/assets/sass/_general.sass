@@ -1,0 +1,314 @@
+$darkGreen: #727a73
+$xs: "(min-width: 319px)"
+$_xs: "(max-width: 350px)"
+$_s: "(max-width: 565px)"
+$sm: "(min-width: 767px)"
+$_sm: "(max-width: 766px)"
+$md: "(min-width: 1025px)"
+$_md: "(max-width: 1024px)"
+$lg: "(min-width: 1224px)"
+$_lg: "(max-width: 1224px)"
+$_xlg: "(max-width: 1750px)"
+$xlg: "(min-width: 1700px)"
+.brand_my
+	font-size: 120px
+	text-transform: uppercase
+	position: relative
+	color: #c3c6c4
+	font-weight: 100
+	//line-height: 1
+	display: inline-block
+	line-height: 80px
+	user-select: none
+	@media #{$_md}
+		font-size: 100px
+	@media #{$_sm}
+		font-size: 70px
+		line-height: 55px
+	@media #{$_s}
+		font-size: 40px
+		line-height: 40px
+	@media (max-height: 600px) and (min-width: 1223px)
+		font-size: 70px
+		line-height: 55px
+	&:before
+		content: ''
+		position: absolute
+		width: 3px
+		height: 35px
+		background-color: #c7452c
+		bottom: 0
+		right: 22px
+		display: none
+		@media #{$_md}
+			bottom: 6px
+			height: 30px
+			right: 18px
+		@media #{$_sm}
+			bottom: 4px
+			height: 22px
+			right: 13px
+		@media #{$_s}
+			bottom: 7px
+			right: 6px
+			height: 14px
+		@media (max-height: 600px) and (min-width: 1223px)
+			bottom: 4px
+			height: 22px
+			right: 13px
+	&.active
+		text-shadow: -28px 11px 5px rgba(41,56,106,.18)
+		color: $darkGreen
+		&:after
+			@media #{$_lg}
+				position: absolute
+				height: 1px
+				width: 100%
+				bottom: -20px
+				left: 0
+				content: ''
+				background-color: $darkGreen
+		@media #{$_s}
+			text-shadow: -10px 8px 2px rgba(41,56,106,.18)
+		&:before
+			display: block
+.brand_nu
+	font-size: 120px
+	text-transform: uppercase
+	position: relative
+	color: #c3c6c4
+	font-weight: 100
+	//line-height: 1
+	display: inline-block
+	line-height: 80px
+	user-select: none
+	@media #{$_md}
+		font-size: 100px
+	@media #{$_sm}
+		font-size: 70px
+		line-height: 55px
+	@media #{$_s}
+		font-size: 40px
+		line-height: 40px
+	@media (max-height: 600px) and (min-width: 1223px)
+		font-size: 70px
+		line-height: 55px
+	&:before
+		content: ''
+		position: absolute
+		top: -4px
+		left: 7px
+		display: none
+		background-image: url('/img/nu_line.png')
+		width: 50px
+		height: 84px
+		user-select: none
+		@media #{$_md}
+			top: 4px
+			height: 70px
+			left: 6px
+		@media #{$_sm}
+			top: 2px
+			height: 49px
+			left: 4px
+		@media #{$_s}
+			top: 5px
+			height: 28px
+			left: 2px
+			width: 16px
+		@media (max-height: 600px) and (min-width: 1223px)
+			top: 2px
+			height: 49px
+			left: 4px
+	&.active
+		text-shadow: -28px 11px 5px rgba(41,56,106,.18)
+		color: $darkGreen
+		&:after
+			@media #{$_lg}
+				position: absolute
+				height: 1px
+				width: 100%
+				bottom: -20px
+				content: ''
+				background-color: $darkGreen
+		@media #{$_s}
+			text-shadow: -10px 8px 2px rgba(41,56,106,.18)
+		&:before
+			display: block
+.brand_re
+	font-size: 120px
+	text-transform: uppercase
+	position: relative
+	color: #c3c6c4
+	font-weight: 100
+	//line-height: 1
+	display: inline-block
+	line-height: 80px
+	user-select: none
+	@media #{$_md}
+		font-size: 100px
+	@media #{$_sm}
+		font-size: 70px
+		line-height: 55px
+	@media #{$_s}
+		font-size: 40px
+		line-height: 40px
+	@media (max-height: 600px) and (min-width: 1223px)
+		font-size: 70px
+		line-height: 55px
+	&:before
+		content: ''
+		position: absolute
+		top: -2px
+		left: 66px
+		display: none
+		width: 3px
+		height: 100%
+		background-color: #c7452c
+		@media #{$_md}
+			top: 4px
+			left: 55px
+			height: 70px
+		@media #{$_sm}
+			top: 2px
+			height: 49px
+			left: 38px
+		@media #{$_s}
+			top: 6px
+			left: 22px
+			height: 28px
+		@media (max-height: 600px) and (min-width: 1223px)
+			top: 2px
+			height: 49px
+			left: 38px
+	&.active
+		text-shadow: -28px 11px 5px rgba(41,56,106,.18)
+		color: $darkGreen
+		&:after
+			@media #{$_lg}
+				position: absolute
+				height: 1px
+				width: 100%
+				bottom: -20px
+				content: ''
+				background-color: $darkGreen
+		@media #{$_s}
+			text-shadow: -10px 8px 2px rgba(41,56,106,.18)
+		&:before
+			display: block
+.clearfix
+	height: 1px
+	clear: both
+	display: table
+html
+	font-size: 10px
+	height: 100%
+	@media #{$_xlg}
+		font-size: 8px
+	@media #{$_lg}
+		font-size: 8px
+	@media #{$_md}
+		font-size: 8px
+	@media #{$_sm}
+		font-size: 7.5px
+	@media #{$_xs}
+		font-size: 7px
+	@media #{$xlg}
+		font-size: 10px
+	body
+		min-width: 320px
+		height: 100%
+		font: 1.8rem "PFDinTextCondPro", sans-serif
+		font-weight: normal
+		position: relative
+		margin: 0 auto
+		overflow-x: hidden
+		button,input,input:focus,select,select:focus,textarea
+			outline: none
+			font-family: "PFDinTextCondPro", sans-serif
+		a
+			color: inherit
+			outline: none
+			text-decoration: none
+$cols: 12
+$col: calc( 100% / #{$cols} )
+=col($num)
+	@media #{$xs}
+		width: calc( #{$col} * #{$num} )
+=offset($offset)
+		margin-left: calc( #{$col} * #{$offset}
+.container
+	margin: 0 auto
+	position: relative
+	width: 100%
+	padding: 0 100px
+	left: 0
+	@media #{$_md}
+		padding: 0 50px
+		//overflow: hidden
+	@media #{$_sm}
+		padding: 0 30px
+	&:after
+		display: table
+		content: ""
+		clear: both
+.hidden-xs
+	display: block!important
+	@media #{$_sm}
+		display: none!important
+.hidden-xs-inline
+	display: inline-block!important
+	@media #{$_sm}
+		display: none!important
+.visible-xs
+	display: none!important
+	@media #{$_sm}
+		display: block!important
+.visible-xs-inline
+	display: none!important
+	@media #{$_sm}
+		display: inline-block!important
+.ps__rail-y
+	background-color: transparent!important
+.ps__thumb-y
+	width: 4px!important
+	cursor: pointer
+	border-radius: 0!important
+	background-color: transparent!important
+	border: 1px solid #fff
+.ps__thumb-y:before
+	content: ''
+	position: absolute
+	width: 15px
+	height: 100%
+	right: 0
+.header__cart.active_cart
+	color: #bd4635
+.main_btn
+	width: 260px
+	background-color: #fff
+	border: 1px solid $darkGreen
+	color: $darkGreen
+	cursor: pointer
+	display: inline-block
+	height: 60px
+	line-height: 55px
+	text-align: center
+	transition: all .3s
+	font-size: 24px
+	font-weight: 300
+	&:hover
+		color: #c7452c
+		border: 1px solid #c7452c
+	@media #{$_sm}
+		width: 100%
+		max-width: 370px
+		color: #c7452c
+		border: 1px solid #c7452c
+.main_page
+    .brand_nu:after
+         display: none
+    .brand_my:after
+         display: none
+    .brand_re:after
+        display: none

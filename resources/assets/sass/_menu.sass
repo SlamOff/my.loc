@@ -1,0 +1,43 @@
+.menu
+	position: absolute
+	top: 0
+	left: 0
+	height: 100%
+	width: 100%
+	opacity: 0
+	z-index: -10
+	background-color: rgba(32,32,34,.95)
+	transition: all .5s
+	overflow: hidden
+	&.shown
+		opacity: 1
+		z-index: 600
+	&__header
+		height: 14vh
+		display: flex
+		align-items: center
+		justify-content: space-between
+		img
+			cursor: pointer
+	&__content
+		text-align: center
+		&:after
+			display: table
+			clear: both
+			content: ''
+		ul
+			display: inline-block
+
+			li
+				font-weight: 300
+				//line-height: 90px
+				//font-size: 30px
+				font-size: 5vh
+				line-height: 12vh
+				color: #fff
+				text-transform: uppercase
+				a
+					&:hover
+						text-decoration: underline
+	.container
+		height: 100%

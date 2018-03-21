@@ -1,0 +1,169 @@
+.footer
+    height: 14vh
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 100%
+    z-index: 500
+    //background-color: #fff
+    user-select: none
+    .contact_info
+        position: absolute
+        left: 0
+        bottom: 0
+        background-color: #fff
+        width: 100%
+        height: 0
+        overflow: hidden
+        z-index: 300
+        transition: height .3s
+        .footer__social
+            display: block
+        @media #{$_sm}
+            transition: height .4s
+            height: 0
+            padding: 0
+            display: flex
+            align-items: center
+        &.shown
+            height: 30vh
+            @media #{$_sm}
+                height: 40vh
+        .container_inner
+            display: flex
+            justify-content: space-between
+            align-items: center
+            height: 100%
+            @media #{$_sm}
+                display: block
+                text-align: center
+        &__item
+            font-size: 24px
+            line-height: 30px
+            color: $darkGreen
+            font-weight: 100
+            @media #{$_sm}
+                margin: 8px 0
+                font-size: 18px
+                .phones
+                    a
+                        display: block
+                    br
+                        display: none
+        .close_contact
+            position: absolute
+            right: 100px
+            top: 30px
+            cursor: pointer
+            z-index: 10
+            width: 21px
+            @media #{$_md}
+                right: 50px
+            @media #{$_sm}
+                right: 30px
+                width: 15px
+    .scroll_top
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        position: absolute
+        z-index: 30
+        cursor: pointer
+    @media #{$_lg}
+        height: 70px
+    .container
+        height: 100%
+        @media #{$_sm}
+            height: auto
+        .row
+            //border-top: 1px solid $darkGreen
+            display: flex
+            position: relative
+            justify-content: space-between
+            align-items: center
+            height: 100%
+            .flex-container
+                display: flex
+                justify-content: space-between
+                width: 100%
+            .slider_nav
+                position: absolute
+                top: -19px
+                cursor: pointer
+                font-size: 28px
+                @media #{$_lg}
+                    top: -19px
+                @media #{$_sm}
+                    top: -8px
+                &.prev
+                    left: -35px
+                    transition: color .4s
+                    &:hover
+                        @media #{$lg}
+                            color: #c7452c
+                    @media #{$_sm}
+                        left: 0
+                &.next
+                    right: -35px
+                    transition: color .4s
+                    &:hover
+                        @media #{$lg}
+                            color: #c7452c
+                    @media #{$_sm}
+                        right: 0
+    &__contact
+        font-size: 24px
+        line-height: 30px
+        color: $darkGreen
+        font-weight: 100
+        text-transform: lowercase
+        transition: color .4s
+        &:hover
+            color: #c7452c
+        @media #{$_sm}
+            display: none
+        @media (max-height: 600px) and (min-width: 1223px)
+            font-size: 18px
+    &__social
+        a
+            display: inline-block
+            margin-left: 50px
+            @media #{$_lg}
+                margin-left: 30px
+                font-size: 30px
+            &:first-of-type
+                margin-left: 0
+            i
+                font-size: 30px
+                transition: color .4s
+                &:hover
+                    @media #{$lg}
+                        color: #c7452c
+                @media #{$_lg}
+                    font-size: 25px
+                @media (max-height: 600px) and (min-width: 1223px)
+                    font-size: 25px
+        @media #{$_sm}
+            display: none
+    .contact_btn.visible-xs
+        font-size: 24px
+        line-height: 30px
+        color: $darkGreen
+        font-weight: 100
+        text-transform: lowercase
+        transition: color .4s
+        position: absolute
+        z-index: 100
+        bottom: 10px
+        left: 50%
+        transform: translateX(-50%)
+.cat_page
+	.footer
+		z-index: 50
+@media #{$_sm}
+    .phones
+        a:first-of-type
+            display: block
+            margin-bottom: 8px
+        br
+            display: none

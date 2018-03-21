@@ -1,0 +1,208 @@
+.cymbal_page
+	.footer
+		@media #{$_lg}
+			position: relative
+			height: 120px
+			@media #{$_sm}
+				height: 70px
+		.row
+			@media #{$_sm}
+				border-top: 1px solid $darkGreen
+	.header
+		.row
+			@media #{$_sm}
+				border-bottom: 1px solid $darkGreen
+	.container--abs
+		bottom: -15px
+		.back
+			color: $darkGreen
+			font-size: 24px
+			font-weight: 300
+			cursor: pointer
+			position: relative
+			@media (max-height: 800px) and (min-width: 1223px)
+				top: 30px
+	.cat
+		&__filter
+			width: 16.66666667%
+			@media #{$_lg}
+				width: 100%
+		&__wrapper
+			width: 83.33333333%
+			padding: 0
+			overflow: visible
+			&:after
+				display: table
+				clear: both
+				content: ''
+			@media #{$_lg}
+				width: 100%
+				height: 100%
+			@media #{$_sm}
+				height: auto
+			.cymbal_slider
+				height: 100%
+				position: relative
+				//overflow: hidden
+				.prev
+					position: absolute
+					top: 50%
+					transform: translateY(-50%)
+					cursor: pointer
+					z-index: 10
+					user-select: none
+					font-size: 28px
+					transition: color .4s
+					&:hover
+						@media #{$lg}
+							color: #c7452c
+				.next
+					@extend .prev
+					right: -50px
+					left: auto
+					@media #{$_md}
+						right: 0
+				.slider_item
+					height: 100%
+					position: absolute
+					text-align: center
+					width: 100%
+					transition: all .8s ease-in-out
+					user-select: none
+					display: flex
+					justify-content: space-around
+					align-items: center
+					transform: translateY(-20px)
+					&.next_slide
+						transform: translateX(-17%)
+						opacity: .4
+					&.prev_slide
+						transform: translateX(17%)
+						opacity: .4
+					@media #{$_sm}
+						position: static
+						margin: 15px 0
+						max-width: 100%
+						transform: none
+					img
+						position: relative
+						max-height: 100%
+						width: auto
+						@media #{$_sm}
+							max-width: 100%
+				.cymbal_desc
+					position: absolute
+					width: 100%
+					left: 0
+					bottom: 0
+					max-height: 0
+					opacity: 0
+					z-index: -1
+					//overflow: hidden
+					background-color: #fff
+					//padding: 80px 0 140px
+					transition: max-height 1s
+					@media #{$_lg}
+						overflow: hidden
+					&.active
+						z-index: 5
+						max-height: 1000px
+						opacity: 1
+					&:before
+						width: 1000px
+						height: 100%
+						top: 0
+						left: 100%
+						content: ''
+						position: absolute
+						background-color: #fff
+					p
+						font-size: 24px
+						line-height: 30px
+						color: $darkGreen
+						font-weight: 300
+						max-width: 850px
+						margin: 0 auto
+						text-align: center
+						padding: 80px 0 140px
+					.close
+						position: absolute
+						right: 0
+						top: 35px
+						cursor: pointer
+						user-select: none
+				.price
+					position: absolute
+					right: 0
+					bottom: 70px
+					z-index: 20
+					font-size: 30px
+					color: $darkGreen
+					line-height: 30px
+					.visible-xs-inline
+						width: 100%
+						margin: 30px 0
+					&_digit
+						font-style: normal
+						@media #{$_sm}
+							display: block
+							text-align: center
+					@media #{$_sm}
+						position: static
+						display: block
+						text-align: center
+						margin-top: 70px
+					b
+						font-weight: normal
+					i
+						vertical-align: text-top
+						margin-left: 40px
+						cursor: pointer
+						user-select: none
+						font-size: 35px
+						transition: color .4s
+						position: relative
+						top: 7px
+						&:hover
+							@media #{$lg}
+								color: #c7452c
+						@media #{$_sm}
+							display: block
+							margin: 0 auto
+		.buy_wrapper
+			display: inline-block
+			position: relative
+			z-index: 10
+			left: 10%
+			user-select: none
+			width: 360px
+			text-align: center
+			@media #{$_sm}
+				width: 100%
+				left: 0
+				margin: 30px auto
+			&:before
+				content: ''
+				position: absolute
+				height: 1px
+				background-color: #727a73
+				width: 1000px
+				bottom: 0
+				left: calc(100%)
+				top: 3px
+				margin: auto
+				@media #{$_sm}
+					display: none
+			&:after
+				content: ''
+				position: absolute
+				height: 1px
+				background-color: #727a73
+				width: 1000px
+				bottom: 0
+				right: calc(100%)
+				top: 3px
+				margin: auto
+				@media #{$_sm}
+					display: none
+

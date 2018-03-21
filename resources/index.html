@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8" />
+	<title>Vue</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<!-- build:css css/combined.css -->
+	<meta name="csrf-token" content="{{ csrf_token() }}">
+
+	<link rel="stylesheet" href="{{asset('/css/app.css')}}">
+	<!-- endbuild -->
+</head>
+<body class="main_page">
+<div id="app">
+	<main class="main">
+		<header class="header">
+			<div class="container">
+				<div class="row">
+					<router-link to="/"><div class="header__logo"><img src="img/logo.png" alt="Masha Yakush"></div></router-link>
+					<div class="header__right">
+						<router-link to='/cart'><div class="header__cart">cart</div></router-link>
+						<router-link to='/menu'><button class="header__btn"><img src="img/header_btn.png" alt=""></button></router-link>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div>
+			<img class="main__pict" src="img/main_my.png" alt="">
+			<a href="/who-we-are">
+				<div class="nav_left">
+					<span>who we are</span>
+				</div>
+			</a>
+			<a href='/how-its-created'>
+				<div class="nav_right">
+					<span>how it is created</span>
+				</div>
+			</a>
+			<div class="container container--abs">
+				<div class="row">
+					<div class="main__desc">
+						<div class="brand_my active">
+							my
+						</div>
+						<br>
+						<span>tableware with author's drawings</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer class="footer">
+			<div class="container">
+				<div class="row">
+					<div class="footer__contact">
+						<a href="">contacts</a>
+					</div>
+					<div class="footer__social">
+						<a href="https://www.facebook.com/" target="_blank"><img src="img/facebook.png" alt=""></a>
+						<a href="https://www.instagram.com/" target="_blank"><img src="img/instragram.png" alt=""></a>
+						<a href="https://ru.pinterest.com/" target="_blank"><img src="img/pinterest.png" alt=""></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</main>
+</div>
+
+<!--[if lt IE 9]>
+<script src="libs/html5shiv/dist/es5-shim.min.js"></script>
+<script src="libs/html5shiv/dist/html5shiv.min.js"></script>
+<script src="libs/html5shiv/dist/html5shiv-printshiv.min.js"></script>
+<script src="libs/respond/dest/respond.min.js"></script>
+<![endif]-->
+
+<!-- build:js scripts/combined.js -->
+<script src="/js/app.js"></script>
+<!-- endbuild -->
+
+</body>
+</html>
